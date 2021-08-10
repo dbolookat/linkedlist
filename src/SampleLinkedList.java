@@ -13,5 +13,11 @@ public class SampleLinkedList<E> {
         }
         return index;
     }
+    public boolean isEmpty(){
+        if (head==null){
+            return true;
+        }
+        return false;
+    }
 
 }
