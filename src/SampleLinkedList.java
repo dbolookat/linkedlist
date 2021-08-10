@@ -48,4 +48,15 @@ public class SampleLinkedList<E> {
         prev.setNext(removeItem.getNext());
     }
 
+    @Override
+    public String toString() {
+        String linklist="";
+        Node temp= head;
+        while (temp!=null){
+            linklist+=temp.getItem() +" ";
+            temp=temp.getNext();
+        }
+        return  "[ "+linklist + "]";
+    }
+
 }
