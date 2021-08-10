@@ -35,4 +35,17 @@ public class SampleLinkedList<E> {
         }
     }
 
+    public  void remove(E item){
+        Node removeItem = head;
+        Node prev=null;
+        while (removeItem!=null && removeItem.getItem() != item){
+            prev =removeItem;
+            removeItem =removeItem.getNext();
+        }
+        if (removeItem==null){
+            return;
+        }
+        prev.setNext(removeItem.getNext());
+    }
+
 }
