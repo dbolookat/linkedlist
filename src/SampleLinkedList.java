@@ -13,11 +13,26 @@ public class SampleLinkedList<E> {
         }
         return index;
     }
+
     public boolean isEmpty(){
         if (head==null){
             return true;
         }
         return false;
+    }
+
+    public void add(E item) {
+        Node<E> node = new Node<>(item, null);
+        if (isEmpty()) {
+            head = node;
+        } else {
+            Node temp = head;
+            while (temp.getNext() != null) {
+                temp = temp.getNext();
+            }
+            temp.setNext(node);
+
+        }
     }
 
 }
